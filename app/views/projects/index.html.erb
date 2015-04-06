@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index</title>
+</head>
+<body>
+<ul>
+	<%@projects.each do|project| %>
+	<li><%=project.name%></li>
+	<% if project.descriptions.present? %>
+		<%=project.descriptions%>
+	<% end %>
+	<%end%>
+</ul>
+</body>
+</html>
