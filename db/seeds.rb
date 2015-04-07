@@ -10,4 +10,8 @@
 	Project.create name: "Mr Pink", descriptions: "Why am I Mr Pink??"
 	Project.create name: "Osbourn Cox", descriptions: "Lunatics!"
 
+	Project.find(2).entries.create hours: 2, minutes: 31, comments: "You're gonna Mr Pink and you're gonna like it p*ssy Boy", date: Time.now
+	Project.find(1).entries.create hours: 1, minutes: 44, comments: "Pizza taste goooooood", date: Time.now - 10.minutes
+	Project.find(3).entries.create hours: 2, minutes: 31, comments: "I got the new keys to the house", date: Time.now - 3.hours
+
 
