@@ -5,7 +5,10 @@
 <%= entry.hours %> h
 <%= entry.minutes %> m-
 <%= entry.date %>
+<%=link_to('delete', project_entry_path(@project, entry), method: :delete, data: { confirm: 'Are you sure?' }) %>
 </li>
 <% end %>
 </ul>
+<%= link_to('Add Time', new_project_entry_path) %>
 <%= @hours %> total hours worked
+

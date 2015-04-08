@@ -39,6 +39,15 @@ class EntriesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@project = Project.find(params[:project_id])
+		@entry = @project.entries.find(params[:id])
+
+		@entry.destroy
+		redirect_to action:'index'
+
+	end
+
 	private
 		#this is so we only let the user add the entry we want to take
 	def entry_params
