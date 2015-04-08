@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Index</title>
-</head>
-<body>
+
 <ul>
-	<%@projects.each do|project| %>
-	<li><%=project.name%></li>
+	<%@projects.each do |project| %>
+	<!-- link to specific entry from the project name chosen -->
+	<li><%= link_to(project.name, project_entries_path(project))%></li>
 	<% if project.descriptions.present? %>
 		<%=project.descriptions%>
 	<% end %>
 	<%end%>
 </ul>
-</body>
-</html>
